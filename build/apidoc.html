@@ -1,0 +1,2496 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/pwnall/node-xhr2"
+
+    >xhr2 (v0.1.4)</a>
+</h1>
+<h4>XMLHttpRequest emulation for node.js</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xhr2">module xhr2</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.xhr2">
+            function <span class="apidocSignatureSpan"></span>xhr2
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.InvalidStateError">
+            function <span class="apidocSignatureSpan">xhr2.</span>InvalidStateError
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.ProgressEvent">
+            function <span class="apidocSignatureSpan">xhr2.</span>ProgressEvent
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.SecurityError">
+            function <span class="apidocSignatureSpan">xhr2.</span>SecurityError
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest">
+            function <span class="apidocSignatureSpan">xhr2.</span>XMLHttpRequest
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequestUpload">
+            function <span class="apidocSignatureSpan">xhr2.</span>XMLHttpRequestUpload
+            <span class="apidocSignatureSpan">(request)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.nodejsSet">
+            function <span class="apidocSignatureSpan">xhr2.</span>nodejsSet
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.toString">
+            function <span class="apidocSignatureSpan">xhr2.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.</span>DONE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.</span>HEADERS_RECEIVED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.</span>LOADING</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.</span>OPENED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.</span>UNSENT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.</span>InvalidStateError.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.</span>SecurityError.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.</span>XMLHttpRequest.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.</span>XMLHttpRequestUpload.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xhr2.InvalidStateError">module xhr2.InvalidStateError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.InvalidStateError.InvalidStateError">
+            function <span class="apidocSignatureSpan">xhr2.</span>InvalidStateError
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.InvalidStateError.captureStackTrace">
+            function <span class="apidocSignatureSpan">xhr2.InvalidStateError.</span>captureStackTrace
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.InvalidStateError.</span>stackTraceLimit</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.InvalidStateError.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xhr2.InvalidStateError.prototype">module xhr2.InvalidStateError.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.InvalidStateError.prototype.constructor">
+            function <span class="apidocSignatureSpan">xhr2.InvalidStateError.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xhr2.SecurityError">module xhr2.SecurityError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.SecurityError.SecurityError">
+            function <span class="apidocSignatureSpan">xhr2.</span>SecurityError
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.SecurityError.captureStackTrace">
+            function <span class="apidocSignatureSpan">xhr2.SecurityError.</span>captureStackTrace
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.SecurityError.</span>stackTraceLimit</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.SecurityError.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xhr2.SecurityError.prototype">module xhr2.SecurityError.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.SecurityError.prototype.constructor">
+            function <span class="apidocSignatureSpan">xhr2.SecurityError.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xhr2.XMLHttpRequest">module xhr2.XMLHttpRequest</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.XMLHttpRequest">
+            function <span class="apidocSignatureSpan">xhr2.</span>XMLHttpRequest
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.InvalidStateError">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.</span>InvalidStateError
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.ProgressEvent">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.</span>ProgressEvent
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.SecurityError">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.</span>SecurityError
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.XMLHttpRequestUpload">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.</span>XMLHttpRequestUpload
+            <span class="apidocSignatureSpan">(request)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.nodejsSet">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.</span>nodejsSet
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.</span>DONE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.</span>HEADERS_RECEIVED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.</span>LOADING</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.</span>OPENED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.</span>UNSENT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xhr2.XMLHttpRequest.prototype">module xhr2.XMLHttpRequest.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._concatBuffers">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_concatBuffers
+            <span class="apidocSignatureSpan">(buffers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._dispatchProgress">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_dispatchProgress
+            <span class="apidocSignatureSpan">(eventType)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._finalizeHeaders">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_finalizeHeaders
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpRequestError">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_onHttpRequestError
+            <span class="apidocSignatureSpan">(request, error)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpResponse">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_onHttpResponse
+            <span class="apidocSignatureSpan">(request, response)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpResponseClose">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_onHttpResponseClose
+            <span class="apidocSignatureSpan">(response)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpResponseData">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_onHttpResponseData
+            <span class="apidocSignatureSpan">(response, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpResponseEnd">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_onHttpResponseEnd
+            <span class="apidocSignatureSpan">(response)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpTimeout">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_onHttpTimeout
+            <span class="apidocSignatureSpan">(request)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._parseResponse">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_parseResponse
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._parseResponseEncoding">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_parseResponseEncoding
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._parseResponseHeaders">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_parseResponseHeaders
+            <span class="apidocSignatureSpan">(response)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._parseTextResponse">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_parseTextResponse
+            <span class="apidocSignatureSpan">(buffer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._parseUrl">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_parseUrl
+            <span class="apidocSignatureSpan">(urlString)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._sendFile">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_sendFile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._sendHttp">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_sendHttp
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._sendHxxpRequest">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_sendHxxpRequest
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._setError">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_setError
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype._setReadyState">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_setReadyState
+            <span class="apidocSignatureSpan">(newReadyState)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype.abort">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>abort
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype.constructor">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype.getAllResponseHeaders">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>getAllResponseHeaders
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype.getResponseHeader">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>getResponseHeader
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype.nodejsSet">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>nodejsSet
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype.open">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>open
+            <span class="apidocSignatureSpan">(method, url, async, user, password)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype.overrideMimeType">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>overrideMimeType
+            <span class="apidocSignatureSpan">(newMimeType)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype.send">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>send
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequest.prototype.setRequestHeader">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>setRequestHeader
+            <span class="apidocSignatureSpan">(name, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>DONE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>HEADERS_RECEIVED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>LOADING</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>OPENED</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>UNSENT</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_privateHeaders</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_restrictedHeaders</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_restrictedMethods</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>nodejsBaseUrl</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>nodejsHttpAgent</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>nodejsHttpsAgent</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>onreadystatechange</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>readyState</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>response</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>responseText</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>responseType</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>status</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>timeout</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>upload</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_userAgent</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xhr2.XMLHttpRequestUpload">module xhr2.XMLHttpRequestUpload</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequestUpload.XMLHttpRequestUpload">
+            function <span class="apidocSignatureSpan">xhr2.</span>XMLHttpRequestUpload
+            <span class="apidocSignatureSpan">(request)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.XMLHttpRequestUpload.</span>__super__</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xhr2.XMLHttpRequestUpload.prototype">module xhr2.XMLHttpRequestUpload.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequestUpload.prototype._finalizeHeaders">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequestUpload.prototype.</span>_finalizeHeaders
+            <span class="apidocSignatureSpan">(headers, loweredHeaders)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequestUpload.prototype._reset">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequestUpload.prototype.</span>_reset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequestUpload.prototype._setData">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequestUpload.prototype.</span>_setData
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequestUpload.prototype._startUpload">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequestUpload.prototype.</span>_startUpload
+            <span class="apidocSignatureSpan">(request)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.XMLHttpRequestUpload.prototype.constructor">
+            function <span class="apidocSignatureSpan">xhr2.XMLHttpRequestUpload.prototype.</span>constructor
+            <span class="apidocSignatureSpan">(request)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.xhr2.__super__">module xhr2.__super__</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.__super__.addEventListener">
+            function <span class="apidocSignatureSpan">xhr2.__super__.</span>addEventListener
+            <span class="apidocSignatureSpan">(eventType, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.__super__.dispatchEvent">
+            function <span class="apidocSignatureSpan">xhr2.__super__.</span>dispatchEvent
+            <span class="apidocSignatureSpan">(event)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.xhr2.__super__.removeEventListener">
+            function <span class="apidocSignatureSpan">xhr2.__super__.</span>removeEventListener
+            <span class="apidocSignatureSpan">(eventType, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.__super__.</span>onabort</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.__super__.</span>onerror</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.__super__.</span>onload</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.__super__.</span>onloadend</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.__super__.</span>onloadstart</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.__super__.</span>onprogress</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">xhr2.__super__.</span>ontimeout</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xhr2" id="apidoc.module.xhr2">module xhr2</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.xhr2" id="apidoc.element.xhr2.xhr2">
+        function <span class="apidocSignatureSpan"></span>xhr2
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function XMLHttpRequest(options) {
+  XMLHttpRequest.__super__.constructor.call(this);
+  this.onreadystatechange = null;
+  this._anonymous = options &#x26;&#x26; options.anon;
+  this.readyState = XMLHttpRequest.UNSENT;
+  this.response = null;
+  this.responseText = &#x27;&#x27;;
+  this.responseType = &#x27;&#x27;;
+  this.responseURL = &#x27;&#x27;;
+  this.status = 0;
+  this.statusText = &#x27;&#x27;;
+  this.timeout = 0;
+  this.upload = new XMLHttpRequestUpload(this);
+  this._method = null;
+  this._url = null;
+  this._sync = false;
+  this._headers = null;
+  this._loweredHeaders = null;
+  this._mimeOverride = null;
+  this._request = null;
+  this._response = null;
+  this._responseParts = null;
+  this._responseHeaders = null;
+  this._aborting = null;
+  this._error = null;
+  this._loadedBytes = 0;
+  this._totalBytes = 0;
+  this._lengthComputable = false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.InvalidStateError" id="apidoc.element.xhr2.InvalidStateError">
+        function <span class="apidocSignatureSpan">xhr2.</span>InvalidStateError
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InvalidStateError() {
+  return InvalidStateError.__super__.constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.ProgressEvent" id="apidoc.element.xhr2.ProgressEvent">
+        function <span class="apidocSignatureSpan">xhr2.</span>ProgressEvent
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ProgressEvent(type) {
+  this.type = type;
+  this.target = null;
+  this.currentTarget = null;
+  this.lengthComputable = false;
+  this.loaded = 0;
+  this.total = 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.SecurityError" id="apidoc.element.xhr2.SecurityError">
+        function <span class="apidocSignatureSpan">xhr2.</span>SecurityError
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SecurityError() {
+  SecurityError.__super__.constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest" id="apidoc.element.xhr2.XMLHttpRequest">
+        function <span class="apidocSignatureSpan">xhr2.</span>XMLHttpRequest
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function XMLHttpRequest(options) {
+  XMLHttpRequest.__super__.constructor.call(this);
+  this.onreadystatechange = null;
+  this._anonymous = options &#x26;&#x26; options.anon;
+  this.readyState = XMLHttpRequest.UNSENT;
+  this.response = null;
+  this.responseText = &#x27;&#x27;;
+  this.responseType = &#x27;&#x27;;
+  this.responseURL = &#x27;&#x27;;
+  this.status = 0;
+  this.statusText = &#x27;&#x27;;
+  this.timeout = 0;
+  this.upload = new XMLHttpRequestUpload(this);
+  this._method = null;
+  this._url = null;
+  this._sync = false;
+  this._headers = null;
+  this._loweredHeaders = null;
+  this._mimeOverride = null;
+  this._request = null;
+  this._response = null;
+  this._responseParts = null;
+  this._responseHeaders = null;
+  this._aborting = null;
+  this._error = null;
+  this._loadedBytes = 0;
+  this._totalBytes = 0;
+  this._lengthComputable = false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequestUpload" id="apidoc.element.xhr2.XMLHttpRequestUpload">
+        function <span class="apidocSignatureSpan">xhr2.</span>XMLHttpRequestUpload
+        <span class="apidocSignatureSpan">(request)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function XMLHttpRequestUpload(request) {
+  XMLHttpRequestUpload.__super__.constructor.call(this);
+  this._request = request;
+  this._reset();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.nodejsSet" id="apidoc.element.xhr2.nodejsSet">
+        function <span class="apidocSignatureSpan">xhr2.</span>nodejsSet
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nodejsSet = function (options) {
+  XMLHttpRequest.prototype.nodejsSet(options);
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.toString" id="apidoc.element.xhr2.toString">
+        function <span class="apidocSignatureSpan">xhr2.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xhr2.InvalidStateError" id="apidoc.module.xhr2.InvalidStateError">module xhr2.InvalidStateError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.InvalidStateError.InvalidStateError" id="apidoc.element.xhr2.InvalidStateError.InvalidStateError">
+        function <span class="apidocSignatureSpan">xhr2.</span>InvalidStateError
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InvalidStateError() {
+  return InvalidStateError.__super__.constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.InvalidStateError.captureStackTrace" id="apidoc.element.xhr2.InvalidStateError.captureStackTrace">
+        function <span class="apidocSignatureSpan">xhr2.InvalidStateError.</span>captureStackTrace
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function captureStackTrace() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xhr2.InvalidStateError.prototype" id="apidoc.module.xhr2.InvalidStateError.prototype">module xhr2.InvalidStateError.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.InvalidStateError.prototype.constructor" id="apidoc.element.xhr2.InvalidStateError.prototype.constructor">
+        function <span class="apidocSignatureSpan">xhr2.InvalidStateError.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InvalidStateError() {
+  return InvalidStateError.__super__.constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xhr2.SecurityError" id="apidoc.module.xhr2.SecurityError">module xhr2.SecurityError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.SecurityError.SecurityError" id="apidoc.element.xhr2.SecurityError.SecurityError">
+        function <span class="apidocSignatureSpan">xhr2.</span>SecurityError
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SecurityError() {
+  SecurityError.__super__.constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.SecurityError.captureStackTrace" id="apidoc.element.xhr2.SecurityError.captureStackTrace">
+        function <span class="apidocSignatureSpan">xhr2.SecurityError.</span>captureStackTrace
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function captureStackTrace() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xhr2.SecurityError.prototype" id="apidoc.module.xhr2.SecurityError.prototype">module xhr2.SecurityError.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.SecurityError.prototype.constructor" id="apidoc.element.xhr2.SecurityError.prototype.constructor">
+        function <span class="apidocSignatureSpan">xhr2.SecurityError.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SecurityError() {
+  SecurityError.__super__.constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xhr2.XMLHttpRequest" id="apidoc.module.xhr2.XMLHttpRequest">module xhr2.XMLHttpRequest</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.XMLHttpRequest" id="apidoc.element.xhr2.XMLHttpRequest.XMLHttpRequest">
+        function <span class="apidocSignatureSpan">xhr2.</span>XMLHttpRequest
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function XMLHttpRequest(options) {
+  XMLHttpRequest.__super__.constructor.call(this);
+  this.onreadystatechange = null;
+  this._anonymous = options &#x26;&#x26; options.anon;
+  this.readyState = XMLHttpRequest.UNSENT;
+  this.response = null;
+  this.responseText = &#x27;&#x27;;
+  this.responseType = &#x27;&#x27;;
+  this.responseURL = &#x27;&#x27;;
+  this.status = 0;
+  this.statusText = &#x27;&#x27;;
+  this.timeout = 0;
+  this.upload = new XMLHttpRequestUpload(this);
+  this._method = null;
+  this._url = null;
+  this._sync = false;
+  this._headers = null;
+  this._loweredHeaders = null;
+  this._mimeOverride = null;
+  this._request = null;
+  this._response = null;
+  this._responseParts = null;
+  this._responseHeaders = null;
+  this._aborting = null;
+  this._error = null;
+  this._loadedBytes = 0;
+  this._totalBytes = 0;
+  this._lengthComputable = false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.InvalidStateError" id="apidoc.element.xhr2.XMLHttpRequest.InvalidStateError">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.</span>InvalidStateError
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InvalidStateError() {
+  return InvalidStateError.__super__.constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.ProgressEvent" id="apidoc.element.xhr2.XMLHttpRequest.ProgressEvent">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.</span>ProgressEvent
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ProgressEvent(type) {
+  this.type = type;
+  this.target = null;
+  this.currentTarget = null;
+  this.lengthComputable = false;
+  this.loaded = 0;
+  this.total = 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.SecurityError" id="apidoc.element.xhr2.XMLHttpRequest.SecurityError">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.</span>SecurityError
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SecurityError() {
+  SecurityError.__super__.constructor.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.XMLHttpRequestUpload" id="apidoc.element.xhr2.XMLHttpRequest.XMLHttpRequestUpload">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.</span>XMLHttpRequestUpload
+        <span class="apidocSignatureSpan">(request)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function XMLHttpRequestUpload(request) {
+  XMLHttpRequestUpload.__super__.constructor.call(this);
+  this._request = request;
+  this._reset();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.nodejsSet" id="apidoc.element.xhr2.XMLHttpRequest.nodejsSet">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.</span>nodejsSet
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nodejsSet = function (options) {
+  XMLHttpRequest.prototype.nodejsSet(options);
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xhr2.XMLHttpRequest.prototype" id="apidoc.module.xhr2.XMLHttpRequest.prototype">module xhr2.XMLHttpRequest.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._concatBuffers" id="apidoc.element.xhr2.XMLHttpRequest.prototype._concatBuffers">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_concatBuffers
+        <span class="apidocSignatureSpan">(buffers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_concatBuffers = function (buffers) {
+  var buffer, j, k, len, len1, length, target;
+  if (buffers.length === 0) {
+    return new Buffer(0);
+  }
+  if (buffers.length === 1) {
+    return buffers[0];
+  }
+  length = 0;
+  for (j = 0, len = buffers.length; j &#x3c; len; j++) {
+    buffer = buffers[j];
+    length += buffer.length;
+  }
+  target = new Buffer(length);
+  length = 0;
+  for (k = 0, len1 = buffers.length; k &#x3c; len1; k++) {
+    buffer = buffers[k];
+    buffer.copy(target, length);
+    length += buffer.length;
+  }
+  return target;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._dispatchProgress" id="apidoc.element.xhr2.XMLHttpRequest.prototype._dispatchProgress">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_dispatchProgress
+        <span class="apidocSignatureSpan">(eventType)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_dispatchProgress = function (eventType) {
+  var event;
+  event = new ProgressEvent(eventType);
+  event.lengthComputable = this._lengthComputable;
+  event.loaded = this._loadedBytes;
+  event.total = this._totalBytes;
+  this.dispatchEvent(event);
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._finalizeHeaders" id="apidoc.element.xhr2.XMLHttpRequest.prototype._finalizeHeaders">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_finalizeHeaders
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_finalizeHeaders = function () {
+  this._headers[&#x27;Connection&#x27;] = &#x27;keep-alive&#x27;;
+  this._headers[&#x27;Host&#x27;] = this._url.host;
+  if (this._anonymous) {
+    this._headers[&#x27;Referer&#x27;] = &#x27;about:blank&#x27;;
+  }
+  this._headers[&#x27;User-Agent&#x27;] = this._userAgent;
+  this.upload._finalizeHeaders(this._headers, this._loweredHeaders);
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpRequestError" id="apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpRequestError">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_onHttpRequestError
+        <span class="apidocSignatureSpan">(request, error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onHttpRequestError = function (request, error) {
+  if (this._request !== request) {
+    return;
+  }
+  this._setError();
+  request.abort();
+  this._setReadyState(XMLHttpRequest.DONE);
+  this._dispatchProgress(&#x27;error&#x27;);
+  return this._dispatchProgress(&#x27;loadend&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpResponse" id="apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpResponse">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_onHttpResponse
+        <span class="apidocSignatureSpan">(request, response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onHttpResponse = function (request, response) {
+  var lengthString;
+  if (this._request !== request) {
+    return;
+  }
+  switch (response.statusCode) {
+    case 301:
+    case 302:
+    case 303:
+    case 307:
+    case 308:
+      this._url = this._parseUrl(response.headers[&#x27;location&#x27;]);
+      this._method = &#x27;GET&#x27;;
+      if (&#x27;content-type&#x27; in this._loweredHeaders) {
+        delete this._headers[this._loweredHeaders[&#x27;content-type&#x27;]];
+        delete this._loweredHeaders[&#x27;content-type&#x27;];
+      }
+      if (&#x27;Content-Type&#x27; in this._headers) {
+        delete this._headers[&#x27;Content-Type&#x27;];
+      }
+      delete this._headers[&#x27;Content-Length&#x27;];
+      this.upload._reset();
+      this._finalizeHeaders();
+      this._sendHxxpRequest();
+      return;
+  }
+  this._response = response;
+  this._response.on(&#x27;data&#x27;, (function(_this) {
+    return function(data) {
+      return _this._onHttpResponseData(response, data);
+    };
+  })(this));
+  this._response.on(&#x27;end&#x27;, (function(_this) {
+    return function() {
+      return _this._onHttpResponseEnd(response);
+    };
+  })(this));
+  this._response.on(&#x27;close&#x27;, (function(_this) {
+    return function() {
+      return _this._onHttpResponseClose(response);
+    };
+  })(this));
+  this.responseURL = this._url.href.split(&#x27;#&#x27;)[0];
+  this.status = this._response.statusCode;
+  this.statusText = http.STATUS_CODES[this.status];
+  this._parseResponseHeaders(response);
+  if (lengthString = this._responseHeaders[&#x27;content-length&#x27;]) {
+    this._totalBytes = parseInt(lengthString);
+    this._lengthComputable = true;
+  } else {
+    this._lengthComputable = false;
+  }
+  return this._setReadyState(XMLHttpRequest.HEADERS_RECEIVED);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpResponseClose" id="apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpResponseClose">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_onHttpResponseClose
+        <span class="apidocSignatureSpan">(response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onHttpResponseClose = function (response) {
+  var request;
+  if (this._response !== response) {
+    return;
+  }
+  request = this._request;
+  this._setError();
+  request.abort();
+  this._setReadyState(XMLHttpRequest.DONE);
+  this._dispatchProgress(&#x27;error&#x27;);
+  return this._dispatchProgress(&#x27;loadend&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpResponseData" id="apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpResponseData">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_onHttpResponseData
+        <span class="apidocSignatureSpan">(response, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onHttpResponseData = function (response, data) {
+  if (this._response !== response) {
+    return;
+  }
+  this._responseParts.push(data);
+  this._loadedBytes += data.length;
+  if (this.readyState !== XMLHttpRequest.LOADING) {
+    this._setReadyState(XMLHttpRequest.LOADING);
+  }
+  return this._dispatchProgress(&#x27;progress&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpResponseEnd" id="apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpResponseEnd">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_onHttpResponseEnd
+        <span class="apidocSignatureSpan">(response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onHttpResponseEnd = function (response) {
+  if (this._response !== response) {
+    return;
+  }
+  this._parseResponse();
+  this._request = null;
+  this._response = null;
+  this._setReadyState(XMLHttpRequest.DONE);
+  this._dispatchProgress(&#x27;load&#x27;);
+  return this._dispatchProgress(&#x27;loadend&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpTimeout" id="apidoc.element.xhr2.XMLHttpRequest.prototype._onHttpTimeout">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_onHttpTimeout
+        <span class="apidocSignatureSpan">(request)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_onHttpTimeout = function (request) {
+  if (this._request !== request) {
+    return;
+  }
+  this._setError();
+  request.abort();
+  this._setReadyState(XMLHttpRequest.DONE);
+  this._dispatchProgress(&#x27;timeout&#x27;);
+  return this._dispatchProgress(&#x27;loadend&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._parseResponse" id="apidoc.element.xhr2.XMLHttpRequest.prototype._parseResponse">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_parseResponse
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_parseResponse = function () {
+  var arrayBuffer, buffer, i, j, jsonError, ref, view;
+  if (Buffer.concat) {
+    buffer = Buffer.concat(this._responseParts);
+  } else {
+    buffer = this._concatBuffers(this._responseParts);
+  }
+  this._responseParts = null;
+  switch (this.responseType) {
+    case &#x27;text&#x27;:
+      this._parseTextResponse(buffer);
+      break;
+    case &#x27;json&#x27;:
+      this.responseText = null;
+      try {
+        this.response = JSON.parse(buffer.toString(&#x27;utf-8&#x27;));
+      } catch (error1) {
+        jsonError = error1;
+        this.response = null;
+      }
+      break;
+    case &#x27;buffer&#x27;:
+      this.responseText = null;
+      this.response = buffer;
+      break;
+    case &#x27;arraybuffer&#x27;:
+      this.responseText = null;
+      arrayBuffer = new ArrayBuffer(buffer.length);
+      view = new Uint8Array(arrayBuffer);
+      for (i = j = 0, ref = buffer.length; 0 &#x3c;= ref ? j &#x3c; ref : j &#x3e; ref; i = 0 &#x3c;= ref ? ++j : --j) {
+        view[i] = buffer[i];
+      }
+      this.response = arrayBuffer;
+      break;
+    default:
+      this._parseTextResponse(buffer);
+  }
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._parseResponseEncoding" id="apidoc.element.xhr2.XMLHttpRequest.prototype._parseResponseEncoding">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_parseResponseEncoding
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_parseResponseEncoding = function () {
+  var contentType, encoding, match;
+  encoding = null;
+  if (contentType = this._responseHeaders[&#x27;content-type&#x27;]) {
+    if (match = /\;\s*charset\=(.*)$/.exec(contentType)) {
+      return match[1];
+    }
+  }
+  return &#x27;utf-8&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._parseResponseHeaders" id="apidoc.element.xhr2.XMLHttpRequest.prototype._parseResponseHeaders">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_parseResponseHeaders
+        <span class="apidocSignatureSpan">(response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_parseResponseHeaders = function (response) {
+  var loweredName, name, ref, value;
+  this._responseHeaders = {};
+  ref = response.headers;
+  for (name in ref) {
+    value = ref[name];
+    loweredName = name.toLowerCase();
+    if (this._privateHeaders[loweredName]) {
+      continue;
+    }
+    if (this._mimeOverride !== null &#x26;&#x26; loweredName === &#x27;content-type&#x27;) {
+      value = this._mimeOverride;
+    }
+    this._responseHeaders[loweredName] = value;
+  }
+  if (this._mimeOverride !== null &#x26;&#x26; !(&#x27;content-type&#x27; in this._responseHeaders)) {
+    this._responseHeaders[&#x27;content-type&#x27;] = this._mimeOverride;
+  }
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._parseTextResponse" id="apidoc.element.xhr2.XMLHttpRequest.prototype._parseTextResponse">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_parseTextResponse
+        <span class="apidocSignatureSpan">(buffer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_parseTextResponse = function (buffer) {
+  var e;
+  try {
+    this.responseText = buffer.toString(this._parseResponseEncoding());
+  } catch (error1) {
+    e = error1;
+    this.responseText = buffer.toString(&#x27;binary&#x27;);
+  }
+  this.response = this.responseText;
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._parseUrl" id="apidoc.element.xhr2.XMLHttpRequest.prototype._parseUrl">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_parseUrl
+        <span class="apidocSignatureSpan">(urlString)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_parseUrl = function (urlString) {
+  var absoluteUrlString, index, password, user, xhrUrl;
+  if (this.nodejsBaseUrl === null) {
+    absoluteUrlString = urlString;
+  } else {
+    absoluteUrlString = url.resolve(this.nodejsBaseUrl, urlString);
+  }
+  xhrUrl = url.parse(absoluteUrlString, false, true);
+  xhrUrl.hash = null;
+  if (xhrUrl.auth &#x26;&#x26; ((typeof user !== &#x22;undefined&#x22; &#x26;&#x26; user !== null) || (typeof password !== &#x22;undefined&#x22; &#x26;&#x26; password !== null))) {
+    index = xhrUrl.auth.indexOf(&#x27;:&#x27;);
+    if (index === -1) {
+      if (!user) {
+        user = xhrUrl.auth;
+      }
+    } else {
+      if (!user) {
+        user = xhrUrl.substring(0, index);
+      }
+      if (!password) {
+        password = xhrUrl.substring(index + 1);
+      }
+    }
+  }
+  if (user || password) {
+    xhrUrl.auth = user + &#x22;:&#x22; + password;
+  }
+  return xhrUrl;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._sendFile" id="apidoc.element.xhr2.XMLHttpRequest.prototype._sendFile">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_sendFile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_sendFile = function () {
+  if (this._url.method !== &#x27;GET&#x27;) {
+    throw new NetworkError(&#x27;The file protocol only supports GET&#x27;);
+  }
+  throw new Error(&#x22;Protocol file: not implemented&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._sendHttp" id="apidoc.element.xhr2.XMLHttpRequest.prototype._sendHttp">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_sendHttp
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_sendHttp = function (data) {
+  if (this._sync) {
+    throw new Error(&#x22;Synchronous XHR processing not implemented&#x22;);
+  }
+  if ((data != null) &#x26;&#x26; (this._method === &#x27;GET&#x27; || this._method === &#x27;HEAD&#x27;)) {
+    console.warn(&#x22;Discarding entity body for &#x22; + this._method + &#x22; requests&#x22;);
+    data = null;
+  } else {
+    data || (data = &#x27;&#x27;);
+  }
+  this.upload._setData(data);
+  this._finalizeHeaders();
+  this._sendHxxpRequest();
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._sendHxxpRequest" id="apidoc.element.xhr2.XMLHttpRequest.prototype._sendHxxpRequest">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_sendHxxpRequest
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_sendHxxpRequest = function () {
+  var agent, hxxp, request;
+  if (this._url.protocol === &#x27;http:&#x27;) {
+    hxxp = http;
+    agent = this.nodejsHttpAgent;
+  } else {
+    hxxp = https;
+    agent = this.nodejsHttpsAgent;
+  }
+  request = hxxp.request({
+    hostname: this._url.hostname,
+    port: this._url.port,
+    path: this._url.path,
+    auth: this._url.auth,
+    method: this._method,
+    headers: this._headers,
+    agent: agent
+  });
+  this._request = request;
+  if (this.timeout) {
+    request.setTimeout(this.timeout, (function(_this) {
+      return function() {
+        return _this._onHttpTimeout(request);
+      };
+    })(this));
+  }
+  request.on(&#x27;response&#x27;, (function(_this) {
+    return function(response) {
+      return _this._onHttpResponse(request, response);
+    };
+  })(this));
+  request.on(&#x27;error&#x27;, (function(_this) {
+    return function(error) {
+      return _this._onHttpRequestError(request, error);
+    };
+  })(this));
+  this.upload._startUpload(request);
+  if (this._request === request) {
+    this._dispatchProgress(&#x27;loadstart&#x27;);
+  }
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._setError" id="apidoc.element.xhr2.XMLHttpRequest.prototype._setError">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_setError
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_setError = function () {
+  this._request = null;
+  this._response = null;
+  this._responseHeaders = null;
+  this._responseParts = null;
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype._setReadyState" id="apidoc.element.xhr2.XMLHttpRequest.prototype._setReadyState">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>_setReadyState
+        <span class="apidocSignatureSpan">(newReadyState)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_setReadyState = function (newReadyState) {
+  var event;
+  this.readyState = newReadyState;
+  event = new ProgressEvent(&#x27;readystatechange&#x27;);
+  this.dispatchEvent(event);
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype.abort" id="apidoc.element.xhr2.XMLHttpRequest.prototype.abort">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>abort
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">abort = function () {
+  if (!this._request) {
+    return;
+  }
+  this._request.abort();
+  this._setError();
+  this._dispatchProgress(&#x27;abort&#x27;);
+  this._dispatchProgress(&#x27;loadend&#x27;);
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype.constructor" id="apidoc.element.xhr2.XMLHttpRequest.prototype.constructor">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function XMLHttpRequest(options) {
+  XMLHttpRequest.__super__.constructor.call(this);
+  this.onreadystatechange = null;
+  this._anonymous = options &#x26;&#x26; options.anon;
+  this.readyState = XMLHttpRequest.UNSENT;
+  this.response = null;
+  this.responseText = &#x27;&#x27;;
+  this.responseType = &#x27;&#x27;;
+  this.responseURL = &#x27;&#x27;;
+  this.status = 0;
+  this.statusText = &#x27;&#x27;;
+  this.timeout = 0;
+  this.upload = new XMLHttpRequestUpload(this);
+  this._method = null;
+  this._url = null;
+  this._sync = false;
+  this._headers = null;
+  this._loweredHeaders = null;
+  this._mimeOverride = null;
+  this._request = null;
+  this._response = null;
+  this._responseParts = null;
+  this._responseHeaders = null;
+  this._aborting = null;
+  this._error = null;
+  this._loadedBytes = 0;
+  this._totalBytes = 0;
+  this._lengthComputable = false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype.getAllResponseHeaders" id="apidoc.element.xhr2.XMLHttpRequest.prototype.getAllResponseHeaders">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>getAllResponseHeaders
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAllResponseHeaders = function () {
+  var lines, name, value;
+  if (!this._responseHeaders) {
+    return &#x27;&#x27;;
+  }
+  lines = (function() {
+    var ref, results;
+    ref = this._responseHeaders;
+    results = [];
+    for (name in ref) {
+      value = ref[name];
+      results.push(name + &#x22;: &#x22; + value);
+    }
+    return results;
+  }).call(this);
+  return lines.join(&#x22;\r\n&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype.getResponseHeader" id="apidoc.element.xhr2.XMLHttpRequest.prototype.getResponseHeader">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>getResponseHeader
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getResponseHeader = function (name) {
+  var loweredName;
+  if (!this._responseHeaders) {
+    return null;
+  }
+  loweredName = name.toLowerCase();
+  if (loweredName in this._responseHeaders) {
+    return this._responseHeaders[loweredName];
+  } else {
+    return null;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype.nodejsSet" id="apidoc.element.xhr2.XMLHttpRequest.prototype.nodejsSet">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>nodejsSet
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nodejsSet = function (options) {
+  var baseUrl, parsedUrl;
+  if (&#x27;httpAgent&#x27; in options) {
+    this.nodejsHttpAgent = options.httpAgent;
+  }
+  if (&#x27;httpsAgent&#x27; in options) {
+    this.nodejsHttpsAgent = options.httpsAgent;
+  }
+  if (&#x27;baseUrl&#x27; in options) {
+    baseUrl = options.baseUrl;
+    if (baseUrl !== null) {
+      parsedUrl = url.parse(baseUrl, false, true);
+      if (!parsedUrl.protocol) {
+        throw new SyntaxError(&#x22;baseUrl must be an absolute URL&#x22;);
+      }
+    }
+    this.nodejsBaseUrl = baseUrl;
+  }
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype.open" id="apidoc.element.xhr2.XMLHttpRequest.prototype.open">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>open
+        <span class="apidocSignatureSpan">(method, url, async, user, password)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">open = function (method, url, async, user, password) {
+  var xhrUrl;
+  method = method.toUpperCase();
+  if (method in this._restrictedMethods) {
+    throw new SecurityError(&#x22;HTTP method &#x22; + method + &#x22; is not allowed in XHR&#x22;);
+  }
+  xhrUrl = this._parseUrl(url);
+  if (async === void 0) {
+    async = true;
+  }
+  switch (this.readyState) {
+    case XMLHttpRequest.UNSENT:
+    case XMLHttpRequest.OPENED:
+    case XMLHttpRequest.DONE:
+      null;
+      break;
+    case XMLHttpRequest.HEADERS_RECEIVED:
+    case XMLHttpRequest.LOADING:
+      null;
+  }
+  this._method = method;
+  this._url = xhrUrl;
+  this._sync = !async;
+  this._headers = {};
+  this._loweredHeaders = {};
+  this._mimeOverride = null;
+  this._setReadyState(XMLHttpRequest.OPENED);
+  this._request = null;
+  this._response = null;
+  this.status = 0;
+  this.statusText = &#x27;&#x27;;
+  this._responseParts = [];
+  this._responseHeaders = null;
+  this._loadedBytes = 0;
+  this._totalBytes = 0;
+  this._lengthComputable = false;
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype.overrideMimeType" id="apidoc.element.xhr2.XMLHttpRequest.prototype.overrideMimeType">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>overrideMimeType
+        <span class="apidocSignatureSpan">(newMimeType)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">overrideMimeType = function (newMimeType) {
+  if (this.readyState === XMLHttpRequest.LOADING || this.readyState === XMLHttpRequest.DONE) {
+    throw new InvalidStateError(&#x22;overrideMimeType() not allowed in LOADING or DONE&#x22;);
+  }
+  this._mimeOverride = newMimeType.toLowerCase();
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype.send" id="apidoc.element.xhr2.XMLHttpRequest.prototype.send">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>send
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">send = function (data) {
+  if (this.readyState !== XMLHttpRequest.OPENED) {
+    throw new InvalidStateError(&#x22;XHR readyState must be OPENED&#x22;);
+  }
+  if (this._request) {
+    throw new InvalidStateError(&#x22;send() already called&#x22;);
+  }
+  switch (this._url.protocol) {
+    case &#x27;file:&#x27;:
+      this._sendFile(data);
+      break;
+    case &#x27;http:&#x27;:
+    case &#x27;https:&#x27;:
+      this._sendHttp(data);
+      break;
+    default:
+      throw new NetworkError(&#x22;Unsupported protocol &#x22; + this._url.protocol);
+  }
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequest.prototype.setRequestHeader" id="apidoc.element.xhr2.XMLHttpRequest.prototype.setRequestHeader">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequest.prototype.</span>setRequestHeader
+        <span class="apidocSignatureSpan">(name, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setRequestHeader = function (name, value) {
+  var loweredName;
+  if (this.readyState !== XMLHttpRequest.OPENED) {
+    throw new InvalidStateError(&#x22;XHR readyState must be OPENED&#x22;);
+  }
+  loweredName = name.toLowerCase();
+  if (this._restrictedHeaders[loweredName] || /^sec\-/.test(loweredName) || /^proxy-/.test(loweredName)) {
+    console.warn(&#x22;Refused to set unsafe header \&#x22;&#x22; + name + &#x22;\&#x22;&#x22;);
+    return void 0;
+  }
+  value = value.toString();
+  if (loweredName in this._loweredHeaders) {
+    name = this._loweredHeaders[loweredName];
+    this._headers[name] = this._headers[name] + &#x27;, &#x27; + value;
+  } else {
+    this._loweredHeaders[loweredName] = name;
+    this._headers[name] = value;
+  }
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xhr2.XMLHttpRequestUpload" id="apidoc.module.xhr2.XMLHttpRequestUpload">module xhr2.XMLHttpRequestUpload</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequestUpload.XMLHttpRequestUpload" id="apidoc.element.xhr2.XMLHttpRequestUpload.XMLHttpRequestUpload">
+        function <span class="apidocSignatureSpan">xhr2.</span>XMLHttpRequestUpload
+        <span class="apidocSignatureSpan">(request)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function XMLHttpRequestUpload(request) {
+  XMLHttpRequestUpload.__super__.constructor.call(this);
+  this._request = request;
+  this._reset();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xhr2.XMLHttpRequestUpload.prototype" id="apidoc.module.xhr2.XMLHttpRequestUpload.prototype">module xhr2.XMLHttpRequestUpload.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequestUpload.prototype._finalizeHeaders" id="apidoc.element.xhr2.XMLHttpRequestUpload.prototype._finalizeHeaders">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequestUpload.prototype.</span>_finalizeHeaders
+        <span class="apidocSignatureSpan">(headers, loweredHeaders)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_finalizeHeaders = function (headers, loweredHeaders) {
+  if (this._contentType) {
+    if (!(&#x27;content-type&#x27; in loweredHeaders)) {
+      headers[&#x27;Content-Type&#x27;] = this._contentType;
+    }
+  }
+  if (this._body) {
+    headers[&#x27;Content-Length&#x27;] = this._body.length.toString();
+  }
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequestUpload.prototype._reset" id="apidoc.element.xhr2.XMLHttpRequestUpload.prototype._reset">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequestUpload.prototype.</span>_reset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_reset = function () {
+  this._contentType = null;
+  this._body = null;
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequestUpload.prototype._setData" id="apidoc.element.xhr2.XMLHttpRequestUpload.prototype._setData">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequestUpload.prototype.</span>_setData
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_setData = function (data) {
+  var body, i, j, k, offset, ref, ref1, view;
+  if (typeof data === &#x27;undefined&#x27; || data === null) {
+    return;
+  }
+  if (typeof data === &#x27;string&#x27;) {
+    if (data.length !== 0) {
+      this._contentType = &#x27;text/plain;charset=UTF-8&#x27;;
+    }
+    this._body = new Buffer(data, &#x27;utf8&#x27;);
+  } else if (Buffer.isBuffer(data)) {
+    this._body = data;
+  } else if (data instanceof ArrayBuffer) {
+    body = new Buffer(data.byteLength);
+    view = new Uint8Array(data);
+    for (i = j = 0, ref = data.byteLength; 0 &#x3c;= ref ? j &#x3c; ref : j &#x3e; ref; i = 0 &#x3c;= ref ? ++j : --j) {
+      body[i] = view[i];
+    }
+    this._body = body;
+  } else if (data.buffer &#x26;&#x26; data.buffer instanceof ArrayBuffer) {
+    body = new Buffer(data.byteLength);
+    offset = data.byteOffset;
+    view = new Uint8Array(data.buffer);
+    for (i = k = 0, ref1 = data.byteLength; 0 &#x3c;= ref1 ? k &#x3c; ref1 : k &#x3e; ref1; i = 0 &#x3c;= ref1 ? ++k : --k) {
+      body[i] = view[i + offset];
+    }
+    this._body = body;
+  } else {
+    throw new Error(&#x22;Unsupported send() data &#x22; + data);
+  }
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequestUpload.prototype._startUpload" id="apidoc.element.xhr2.XMLHttpRequestUpload.prototype._startUpload">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequestUpload.prototype.</span>_startUpload
+        <span class="apidocSignatureSpan">(request)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_startUpload = function (request) {
+  if (this._body) {
+    request.write(this._body);
+  }
+  request.end();
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.XMLHttpRequestUpload.prototype.constructor" id="apidoc.element.xhr2.XMLHttpRequestUpload.prototype.constructor">
+        function <span class="apidocSignatureSpan">xhr2.XMLHttpRequestUpload.prototype.</span>constructor
+        <span class="apidocSignatureSpan">(request)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function XMLHttpRequestUpload(request) {
+  XMLHttpRequestUpload.__super__.constructor.call(this);
+  this._request = request;
+  this._reset();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.xhr2.__super__" id="apidoc.module.xhr2.__super__">module xhr2.__super__</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.__super__.addEventListener" id="apidoc.element.xhr2.__super__.addEventListener">
+        function <span class="apidocSignatureSpan">xhr2.__super__.</span>addEventListener
+        <span class="apidocSignatureSpan">(eventType, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addEventListener = function (eventType, listener) {
+  var base;
+  eventType = eventType.toLowerCase();
+  (base = this._listeners)[eventType] || (base[eventType] = []);
+  this._listeners[eventType].push(listener);
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.__super__.dispatchEvent" id="apidoc.element.xhr2.__super__.dispatchEvent">
+        function <span class="apidocSignatureSpan">xhr2.__super__.</span>dispatchEvent
+        <span class="apidocSignatureSpan">(event)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dispatchEvent = function (event) {
+  var eventType, j, len, listener, listeners;
+  event.currentTarget = event.target = this;
+  eventType = event.type;
+  if (listeners = this._listeners[eventType]) {
+    for (j = 0, len = listeners.length; j &#x3c; len; j++) {
+      listener = listeners[j];
+      listener.call(this, event);
+    }
+  }
+  if (listener = this[&#x22;on&#x22; + eventType]) {
+    listener.call(this, event);
+  }
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.xhr2.__super__.removeEventListener" id="apidoc.element.xhr2.__super__.removeEventListener">
+        function <span class="apidocSignatureSpan">xhr2.__super__.</span>removeEventListener
+        <span class="apidocSignatureSpan">(eventType, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeEventListener = function (eventType, listener) {
+  var index;
+  eventType = eventType.toLowerCase();
+  if (this._listeners[eventType]) {
+    index = this._listeners[eventType].indexOf(listener);
+    if (index !== -1) {
+      this._listeners[eventType].splice(index, 1);
+    }
+  }
+  return void 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
