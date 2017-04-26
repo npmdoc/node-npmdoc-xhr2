@@ -1,6 +1,6 @@
 # npmdoc-xhr2
 
-#### api documentation for  [xhr2 (v0.1.4)](https://github.com/pwnall/node-xhr2)  [![npm package](https://img.shields.io/npm/v/npmdoc-xhr2.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-xhr2) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-xhr2.svg)](https://travis-ci.org/npmdoc/node-npmdoc-xhr2)
+#### basic api documentation for  [xhr2 (v0.1.4)](https://github.com/pwnall/node-xhr2)  [![npm package](https://img.shields.io/npm/v/npmdoc-xhr2.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-xhr2) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-xhr2.svg)](https://travis-ci.org/npmdoc/node-npmdoc-xhr2)
 
 #### XMLHttpRequest emulation for node.js
 
@@ -90,7 +90,8 @@
         "prepublish": "node_modules/coffee-script/bin/cake build",
         "test": "node_modules/coffee-script/bin/cake test"
     },
-    "version": "0.1.4"
+    "version": "0.1.4",
+    "bin": {}
 }
 ```
 
