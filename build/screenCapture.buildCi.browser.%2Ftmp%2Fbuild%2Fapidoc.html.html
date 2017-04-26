@@ -119,15 +119,6 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.xhr2.toString">
-            function <span class="apidocSignatureSpan">xhr2.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">xhr2.</span>DONE</span>
 
         </li>
@@ -1059,22 +1050,22 @@
   XMLHttpRequest.prototype.nodejsSet(options);
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+    this.nodejsBaseUrl = baseUrl;
+  }
+  return void 0;
+};
 
+XMLHttpRequest.nodejsSet = function(options) {
+  XMLHttpRequest.prototype.<span class="apidocCodeKeywordSpan">nodejsSet</span>(options);
+  return void 0;
+};
 
+XMLHttpRequest.prototype.UNSENT = 0;
 
-    <h2>
-        <a href="#apidoc.element.xhr2.toString" id="apidoc.element.xhr2.toString">
-        function <span class="apidocSignatureSpan">xhr2.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+XMLHttpRequest.UNSENT = 0;
+...</pre></li>
     </ul>
 
 
@@ -1337,7 +1328,22 @@
   XMLHttpRequest.prototype.nodejsSet(options);
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+    this.nodejsBaseUrl = baseUrl;
+  }
+  return void 0;
+};
+
+XMLHttpRequest.nodejsSet = function(options) {
+  XMLHttpRequest.prototype.<span class="apidocCodeKeywordSpan">nodejsSet</span>(options);
+  return void 0;
+};
+
+XMLHttpRequest.prototype.UNSENT = 0;
+
+XMLHttpRequest.UNSENT = 0;
+...</pre></li>
     </ul>
 
 
@@ -1388,7 +1394,23 @@
   }
   return target;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+XMLHttpRequest.prototype._parseResponse = function() {
+  var arrayBuffer, buffer, i, j, jsonError, ref, view;
+  if (Buffer.concat) {
+    buffer = Buffer.concat(this._responseParts);
+  } else {
+    buffer = this.<span class="apidocCodeKeywordSpan">_concatBuffers</span>(this._responseParts);
+  }
+  this._responseParts = null;
+  switch (this.responseType) {
+    case 'text':
+      this._parseTextResponse(buffer);
+      break;
+    case 'json':
+...</pre></li>
     </ul>
 
 
@@ -1409,7 +1431,23 @@
   this.dispatchEvent(event);
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+XMLHttpRequest.prototype.abort = function() {
+  if (!this._request) {
+    return;
+  }
+  this._request.abort();
+  this._setError();
+  this.<span class="apidocCodeKeywordSpan">_dispatchProgress</span>('abort');
+  this._dispatchProgress('loadend');
+  return void 0;
+};
+
+XMLHttpRequest.prototype.getResponseHeader = function(name) {
+  var loweredName;
+  if (!this._responseHeaders) {
+...</pre></li>
     </ul>
 
 
@@ -1431,7 +1469,23 @@
   this.upload._finalizeHeaders(this._headers, this._loweredHeaders);
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if ((data != null) &amp;&amp; (this._method === 'GET' || this._method === 'HEAD')) {
+    console.warn("Discarding entity body for " + this._method + " requests");
+    data = null;
+  } else {
+    data || (data = '');
+  }
+  this.upload._setData(data);
+  this.<span class="apidocCodeKeywordSpan">_finalizeHeaders</span>();
+  this._sendHxxpRequest();
+  return void 0;
+};
+
+XMLHttpRequest.prototype._sendHxxpRequest = function() {
+  var agent, hxxp, request;
+  if (this._url.protocol === 'http:') {
+...</pre></li>
     </ul>
 
 
@@ -1453,7 +1507,23 @@
   this._dispatchProgress('error');
   return this._dispatchProgress('loadend');
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+request.on('response', (function(_this) {
+  return function(response) {
+    return _this._onHttpResponse(request, response);
+  };
+})(this));
+request.on('error', (function(_this) {
+  return function(error) {
+    return _this.<span class="apidocCodeKeywordSpan">_onHttpRequestError</span>(request, error);
+  };
+})(this));
+this.upload._startUpload(request);
+if (this._request === request) {
+  this._dispatchProgress('loadstart');
+}
+return void 0;
+...</pre></li>
     </ul>
 
 
@@ -1519,7 +1589,23 @@
   }
   return this._setReadyState(XMLHttpRequest.HEADERS_RECEIVED);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return function() {
+      return _this._onHttpTimeout(request);
+    };
+  })(this));
+}
+request.on('response', (function(_this) {
+  return function(response) {
+    return _this.<span class="apidocCodeKeywordSpan">_onHttpResponse</span>(request, response);
+  };
+})(this));
+request.on('error', (function(_this) {
+  return function(error) {
+    return _this._onHttpRequestError(request, error);
+  };
+})(this));
+...</pre></li>
     </ul>
 
 
@@ -1543,7 +1629,23 @@
   this._dispatchProgress('error');
   return this._dispatchProgress('loadend');
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this._response.on('end', (function(_this) {
+  return function() {
+    return _this._onHttpResponseEnd(response);
+  };
+})(this));
+this._response.on('close', (function(_this) {
+  return function() {
+    return _this.<span class="apidocCodeKeywordSpan">_onHttpResponseClose</span>(response);
+  };
+})(this));
+this.responseURL = this._url.href.split('#')[0];
+this.status = this._response.statusCode;
+this.statusText = http.STATUS_CODES[this.status];
+this._parseResponseHeaders(response);
+if (lengthString = this._responseHeaders['content-length']) {
+...</pre></li>
     </ul>
 
 
@@ -1566,7 +1668,23 @@
   }
   return this._dispatchProgress('progress');
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    this._finalizeHeaders();
+    this._sendHxxpRequest();
+    return;
+}
+this._response = response;
+this._response.on('data', (function(_this) {
+  return function(data) {
+    return _this.<span class="apidocCodeKeywordSpan">_onHttpResponseData</span>(response, data);
+  };
+})(this));
+this._response.on('end', (function(_this) {
+  return function() {
+    return _this._onHttpResponseEnd(response);
+  };
+})(this));
+...</pre></li>
     </ul>
 
 
@@ -1589,7 +1707,23 @@
   this._dispatchProgress('load');
   return this._dispatchProgress('loadend');
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this._response.on('data', (function(_this) {
+  return function(data) {
+    return _this._onHttpResponseData(response, data);
+  };
+})(this));
+this._response.on('end', (function(_this) {
+  return function() {
+    return _this.<span class="apidocCodeKeywordSpan">_onHttpResponseEnd</span>(response);
+  };
+})(this));
+this._response.on('close', (function(_this) {
+  return function() {
+    return _this._onHttpResponseClose(response);
+  };
+})(this));
+...</pre></li>
     </ul>
 
 
@@ -1611,7 +1745,23 @@
   this._dispatchProgress('timeout');
   return this._dispatchProgress('loadend');
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  headers: this._headers,
+  agent: agent
+});
+this._request = request;
+if (this.timeout) {
+  request.setTimeout(this.timeout, (function(_this) {
+    return function() {
+      return _this.<span class="apidocCodeKeywordSpan">_onHttpTimeout</span>(request);
+    };
+  })(this));
+}
+request.on('response', (function(_this) {
+  return function(response) {
+    return _this._onHttpResponse(request, response);
+  };
+...</pre></li>
     </ul>
 
 
@@ -1662,7 +1812,22 @@
   }
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return this._dispatchProgress('progress');
+};
+
+XMLHttpRequest.prototype._onHttpResponseEnd = function(response) {
+  if (this._response !== response) {
+    return;
+  }
+  this.<span class="apidocCodeKeywordSpan">_parseResponse</span>();
+  this._request = null;
+  this._response = null;
+  this._setReadyState(XMLHttpRequest.DONE);
+  this._dispatchProgress('load');
+  return this._dispatchProgress('loadend');
+};
+...</pre></li>
     </ul>
 
 
@@ -1684,7 +1849,23 @@
   }
   return 'utf-8';
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+  return void 0;
+};
+
+XMLHttpRequest.prototype._parseTextResponse = function(buffer) {
+  var e;
+  try {
+    this.responseText = buffer.toString(this.<span class="apidocCodeKeywordSpan">_parseResponseEncoding</span>());
+  } catch (error1) {
+    e = error1;
+    this.responseText = buffer.toString('binary');
+  }
+  this.response = this.responseText;
+  return void 0;
+};
+...</pre></li>
     </ul>
 
 
@@ -1716,7 +1897,23 @@
   }
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return function() {
+    return _this._onHttpResponseClose(response);
+  };
+})(this));
+this.responseURL = this._url.href.split('#')[0];
+this.status = this._response.statusCode;
+this.statusText = http.STATUS_CODES[this.status];
+this.<span class="apidocCodeKeywordSpan">_parseResponseHeaders</span>(response);
+if (lengthString = this._responseHeaders['content-length']) {
+  this._totalBytes = parseInt(lengthString);
+  this._lengthComputable = true;
+} else {
+  this._lengthComputable = false;
+}
+return this._setReadyState(XMLHttpRequest.HEADERS_RECEIVED);
+...</pre></li>
     </ul>
 
 
@@ -1739,7 +1936,23 @@
   this.response = this.responseText;
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  buffer = Buffer.concat(this._responseParts);
+} else {
+  buffer = this._concatBuffers(this._responseParts);
+}
+this._responseParts = null;
+switch (this.responseType) {
+  case 'text':
+    this.<span class="apidocCodeKeywordSpan">_parseTextResponse</span>(buffer);
+    break;
+  case 'json':
+    this.responseText = null;
+    try {
+      this.response = JSON.parse(buffer.toString('utf-8'));
+    } catch (error1) {
+      jsonError = error1;
+...</pre></li>
     </ul>
 
 
@@ -1780,7 +1993,23 @@
   }
   return xhrUrl;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    XMLHttpRequest.prototype.open = function(method, url, async, user, password) {
+var xhrUrl;
+method = method.toUpperCase();
+if (method in this._restrictedMethods) {
+  throw new SecurityError("HTTP method " + method + " is not allowed in XHR");
+}
+xhrUrl = this.<span class="apidocCodeKeywordSpan">_parseUrl</span>(url);
+if (async === void 0) {
+  async = true;
+}
+switch (this.readyState) {
+  case XMLHttpRequest.UNSENT:
+  case XMLHttpRequest.OPENED:
+  case XMLHttpRequest.DONE:
+...</pre></li>
     </ul>
 
 
@@ -1798,7 +2027,23 @@
   }
   throw new Error("Protocol file: not implemented");
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  throw new InvalidStateError("XHR readyState must be OPENED");
+}
+if (this._request) {
+  throw new InvalidStateError("send() already called");
+}
+switch (this._url.protocol) {
+  case 'file:':
+    this.<span class="apidocCodeKeywordSpan">_sendFile</span>(data);
+    break;
+  case 'http:':
+  case 'https:':
+    this._sendHttp(data);
+    break;
+  default:
+    throw new NetworkError("Unsupported protocol " + this._url.protocol);
+...</pre></li>
     </ul>
 
 
@@ -1825,7 +2070,22 @@
   this._sendHxxpRequest();
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+  switch (this._url.protocol) {
+    case 'file:':
+      this._sendFile(data);
+      break;
+    case 'http:':
+    case 'https:':
+      this.<span class="apidocCodeKeywordSpan">_sendHttp</span>(data);
+      break;
+    default:
+      throw new NetworkError("Unsupported protocol " + this._url.protocol);
+  }
+  return void 0;
+};
+...</pre></li>
     </ul>
 
 
@@ -1879,7 +2139,23 @@
   }
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    console.warn("Discarding entity body for " + this._method + " requests");
+    data = null;
+  } else {
+    data || (data = '');
+  }
+  this.upload._setData(data);
+  this._finalizeHeaders();
+  this.<span class="apidocCodeKeywordSpan">_sendHxxpRequest</span>();
+  return void 0;
+};
+
+XMLHttpRequest.prototype._sendHxxpRequest = function() {
+  var agent, hxxp, request;
+  if (this._url.protocol === 'http:') {
+    hxxp = http;
+...</pre></li>
     </ul>
 
 
@@ -1898,7 +2174,23 @@
   this._responseParts = null;
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+XMLHttpRequest.prototype.abort = function() {
+  if (!this._request) {
+    return;
+  }
+  this._request.abort();
+  this.<span class="apidocCodeKeywordSpan">_setError</span>();
+  this._dispatchProgress('abort');
+  this._dispatchProgress('loadend');
+  return void 0;
+};
+
+XMLHttpRequest.prototype.getResponseHeader = function(name) {
+  var loweredName;
+...</pre></li>
     </ul>
 
 
@@ -1917,7 +2209,23 @@
   this.dispatchEvent(event);
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+this._method = method;
+this._url = xhrUrl;
+this._sync = !async;
+this._headers = {};
+this._loweredHeaders = {};
+this._mimeOverride = null;
+this.<span class="apidocCodeKeywordSpan">_setReadyState</span>(XMLHttpRequest.OPENED);
+this._request = null;
+this._response = null;
+this.status = 0;
+this.statusText = '';
+this._responseParts = [];
+this._responseHeaders = null;
+this._loadedBytes = 0;
+...</pre></li>
     </ul>
 
 
@@ -1939,7 +2247,23 @@
   this._dispatchProgress('loadend');
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return void 0;
+};
+
+XMLHttpRequest.prototype.abort = function() {
+  if (!this._request) {
+    return;
+  }
+  this._request.<span class="apidocCodeKeywordSpan">abort</span>();
+  this._setError();
+  this._dispatchProgress('abort');
+  this._dispatchProgress('loadend');
+  return void 0;
+};
+
+XMLHttpRequest.prototype.getResponseHeader = function(name) {
+...</pre></li>
     </ul>
 
 
@@ -2009,7 +2333,22 @@
   }).call(this);
   return lines.join("\r\n");
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+       "Content-Type": "application/xhr2; charset=utf-1337",
+       "Set-Cookie": "UserID=JohnDoe; Max-Age=3600; Version=1",
+       "X-Header": "one, more, value"}
+      '''
+
+it 'contains accessible headers', (done) -&gt;
+  @xhr.onloadend = =&gt;
+    headers = @xhr.<span class="apidocCodeKeywordSpan">getAllResponseHeaders</span>()
+    expect(headers).to.match(/(\A|\r\n)accept-ranges: bytes(\r\n|\Z)/mi)
+    expect(headers).to.match(
+        /(\A|\r\n)content-type: application\/xhr2; charset=utf-1337(\r\n|\Z)/mi)
+    expect(headers).to.match(/(\A|\r\n)X-Header: one, more, value(\r\n|\Z)/mi)
+    done()
+  @xhr.send @headerJson
+...</pre></li>
     </ul>
 
 
@@ -2033,7 +2372,24 @@
     return null;
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+       "Content-Type": "application/xhr2; charset=utf-1337",
+       "Set-Cookie": "UserID=JohnDoe; Max-Age=3600; Version=1",
+       "X-Header": "one, more, value"}
+      '''
+
+it 'returns accessible headers', (done) -&gt;
+  @xhr.onloadend = =&gt;
+    expect(@xhr.<span class="apidocCodeKeywordSpan">getResponseHeader</span>('AccEPt-RANgeS')).to.equal 'bytes'
+;
+    expect(@xhr.getResponseHeader('content-Type')).to.
+        equal 'application/xhr2; charset=utf-1337'
+    expect(@xhr.getResponseHeader('X-Header')).to.equal "one, more, value"
+    done()
+  @xhr.send @headerJson
+
+it 'returns null for private headers', (done) -&gt;
+...</pre></li>
     </ul>
 
 
@@ -2065,7 +2421,22 @@
   }
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+    this.nodejsBaseUrl = baseUrl;
+  }
+  return void 0;
+};
+
+XMLHttpRequest.nodejsSet = function(options) {
+  XMLHttpRequest.prototype.<span class="apidocCodeKeywordSpan">nodejsSet</span>(options);
+  return void 0;
+};
+
+XMLHttpRequest.prototype.UNSENT = 0;
+
+XMLHttpRequest.UNSENT = 0;
+...</pre></li>
     </ul>
 
 
@@ -2166,7 +2537,23 @@
   }
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      found = true
+    expect(found).to.equal true
+    done()
+
+    describe 'for a network error due to bad DNS', (done) -&gt;
+beforeEach -&gt;
+  @xhr.open 'GET', 'https://broken.to.cause.an.xhrnetworkerror.com'
+  @xhr.<span class="apidocCodeKeywordSpan">send</span>()
+
+it 'no progress or load is emitted', (done) -&gt;
+  @events.check = =&gt;
+    for event in @events
+      expect(event.type).not.to.equal 'load'
+      expect(event.type).not.to.equal 'progress'
+    done()
+...</pre></li>
     </ul>
 
 
@@ -2290,7 +2677,23 @@
   }
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if ((data != null) &amp;&amp; (this._method === 'GET' || this._method === 'HEAD')) {
+    console.warn("Discarding entity body for " + this._method + " requests");
+    data = null;
+  } else {
+    data || (data = '');
+  }
+  this.upload._setData(data);
+  this.<span class="apidocCodeKeywordSpan">_finalizeHeaders</span>();
+  this._sendHxxpRequest();
+  return void 0;
+};
+
+XMLHttpRequest.prototype._sendHxxpRequest = function() {
+  var agent, hxxp, request;
+  if (this._url.protocol === 'http:') {
+...</pre></li>
     </ul>
 
 
@@ -2307,7 +2710,23 @@
   this._body = null;
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      delete this._headers[this._loweredHeaders['content-type']];
+      delete this._loweredHeaders['content-type'];
+    }
+    if ('Content-Type' in this._headers) {
+      delete this._headers['Content-Type'];
+    }
+    delete this._headers['Content-Length'];
+    this.upload.<span class="apidocCodeKeywordSpan">_reset</span>();
+    this._finalizeHeaders();
+    this._sendHxxpRequest();
+    return;
+}
+this._response = response;
+this._response.on('data', (function(_this) {
+  return function(data) {
+...</pre></li>
     </ul>
 
 
@@ -2351,7 +2770,23 @@
   }
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+  if ((data != null) &amp;&amp; (this._method === 'GET' || this._method === 'HEAD')) {
+    console.warn("Discarding entity body for " + this._method + " requests");
+    data = null;
+  } else {
+    data || (data = '');
+  }
+  this.upload.<span class="apidocCodeKeywordSpan">_setData</span>(data);
+  this._finalizeHeaders();
+  this._sendHxxpRequest();
+  return void 0;
+};
+
+XMLHttpRequest.prototype._sendHxxpRequest = function() {
+  var agent, hxxp, request;
+...</pre></li>
     </ul>
 
 
@@ -2370,7 +2805,23 @@
   request.end();
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    };
+  })(this));
+  request.on('error', (function(_this) {
+    return function(error) {
+      return _this._onHttpRequestError(request, error);
+    };
+  })(this));
+  this.upload.<span class="apidocCodeKeywordSpan">_startUpload</span>(request);
+  if (this._request === request) {
+    this._dispatchProgress('loadstart');
+  }
+  return void 0;
+};
+
+XMLHttpRequest.prototype._finalizeHeaders = function() {
+...</pre></li>
     </ul>
 
 
@@ -2438,7 +2889,24 @@
   }
   return void 0;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+XMLHttpRequest.prototype._userAgent = ("Mozilla/5.0 (" + (os.type()) + " " + (os.arch()) + ") ") + (&amp;#
+x22;node.js/" + process.versions.node + " v8/" + process.versions.v8);
+
+XMLHttpRequest.prototype._setReadyState = function(newReadyState) {
+  var event;
+  this.readyState = newReadyState;
+  event = new ProgressEvent('readystatechange');
+  this.<span class="apidocCodeKeywordSpan">dispatchEvent</span>(event);
+  return void 0;
+};
+
+XMLHttpRequest.prototype._sendFile = function() {
+  if (this._url.method !== 'GET') {
+    throw new NetworkError('The file protocol only supports GET');
+  }
+...</pre></li>
     </ul>
 
 
